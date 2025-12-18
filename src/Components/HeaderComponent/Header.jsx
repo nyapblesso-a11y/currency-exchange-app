@@ -5,11 +5,11 @@ function Header() {
     <>
       <div>
         <header className="header">
-          <h4>Currency Exchange Wallet</h4>
+          <h3>Currency Exchange Wallet</h3>
 
           <div className="default-currency">
             <h4>Default Currency:</h4>
-            <select name="" id="">
+            <select name="" id="" className="select">
               <option value="">USD</option>
               <option value="">EUR</option>
               <option value="">XAF</option>
