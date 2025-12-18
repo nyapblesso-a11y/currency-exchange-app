@@ -8,7 +8,7 @@ function Balance() {
         <div className="balance-usd">
           <div className="top">
             <ReactCountryFlag countryCode="US" />
-            <p>USD balance</p>
+            <p>USD Balance</p>
           </div>
           <hr />
           <div className="balance-amount">
@@ -21,12 +21,12 @@ function Balance() {
         <div className="balance-eur">
           <div className="top">
                 <ReactCountryFlag countryCode="EU" />
-            <p>USD balance</p>
+            <p>USD Balance</p>
           </div>
           <hr />
           <div className="balance-amount">
             <span>
-              $ <h1>500</h1> .00 EUR
+              € <h1>500</h1> .00 EUR
             </span>
           </div>
         </div>
@@ -34,12 +34,12 @@ function Balance() {
         <div className="balance-xfa">
           <div className="top">
                  <ReactCountryFlag countryCode="CM" />
-            <p>USD balance</p>
+            <p>USD Balance</p>
           </div>
           <hr />
           <div className="balance-amount">
             <span>
-              $ <h1>10000</h1>.00 XFA
+               <h1>10000</h1>.00 XFA
             </span>
           </div>
         </div>

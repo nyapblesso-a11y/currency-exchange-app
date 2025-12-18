@@ -9,7 +9,7 @@ function Header() {
 
           <div className="default-currency">
             <h4>Default Currency:</h4>
-            <select name="" id="" className="select">
+            <select name="" id="">
               <option value="">USD</option>
               <option value="">EUR</option>
               <option value="">XAF</option>
