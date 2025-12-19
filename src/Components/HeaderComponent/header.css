@@ -20,12 +20,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
 }
 
 .default-currency h4 {
   color: #999ba0;
+  width: 17rem;
 }
 .default-currency .select {
   background-color: #fff;

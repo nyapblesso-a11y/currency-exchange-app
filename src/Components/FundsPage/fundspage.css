@@ -16,7 +16,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: italic;
-  width: 350px;
+  max-width: 340x;
   background-color: #ffff;
   border-radius: 5px;
   border: 1.5px solid #fff;
@@ -100,11 +100,11 @@ select {
 }
 
 @media (max-width: 900px) {
-    .funds-card{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-    }
+  .funds-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
 }

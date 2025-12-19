@@ -10,4 +10,24 @@
   background-color: #f5f7fa;
 }
 
+.total-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-value h4 {
+  color: #64748b;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.total-value h4 span {
+  color: #0F172A;
+  font-weight: 600;
+  font-size: large;
+}
+
 

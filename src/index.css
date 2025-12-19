@@ -4,4 +4,7 @@
   box-sizing: border-box;
 }
 
-
+body {
+  margin-top: 4em;
+  background-color: #f5f7fa;
+}
