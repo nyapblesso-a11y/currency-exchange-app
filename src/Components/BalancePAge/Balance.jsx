@@ -1,7 +1,7 @@
 import React from "react";
 import "./balance.css";
 import ReactCountryFlag from "react-country-flag";
-function Balance({balance}) {
+function Balance({balancedefaultCurrency, setDefaultCurrency}) {
   return (
     <>
       <div className="cards">
