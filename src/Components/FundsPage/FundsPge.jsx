@@ -1,6 +1,6 @@
 import React from "react";
 import "./fundspage.css";
-function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency, setToCurrency, balances, setBalances}) {
+function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency, setToCurrency, balance, setBalances}) {
 
   const exchangeRates = {
   USD: { EUR: 0.8483, XAF: 556.74 },
@@ -10,6 +10,15 @@ function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency,
 
   const handleExchange = () => {
     const exchangeRate = exchangeRates[fromCurrency][toCurrency]
+    const amountToExchange = parseFloat(amount)
+    if(balance[fromCurrency] >= amountToExchange) {
+      setBalances((prevBalances) => ({
+        ...prevBalances,
+        [fromCurrency]: prevBalances[fromCurrency]- amountToExchange,
+        [toCurrency]: prevBalances[toCurrency] + amountToExchange * exchangeRate,
+      }))
+      setAmount("")
+    }
   }
 
   const handleDeposit = () => {
