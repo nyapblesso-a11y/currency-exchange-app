@@ -1,7 +1,7 @@
 import React from "react";
 import "./balance.css";
 import ReactCountryFlag from "react-country-flag";
-function Balance() {
+function Balance({balance}) {
   return (
     <>
       <div className="cards">
@@ -13,7 +13,7 @@ function Balance() {
           <hr />
           <div className="balance-amount">
             <span>
-              $ <h1>100</h1>.00 USD
+              $ <h1>{balance.USD}</h1>.00 USD
             </span>
           </div>
         </div>
@@ -26,7 +26,7 @@ function Balance() {
           <hr />
           <div className="balance-amount">
             <span>
-              € <h1>500</h1> .00 EUR
+              € <h1>{balance.EUR}</h1> .00 EUR
             </span>
           </div>
         </div>
@@ -39,7 +39,7 @@ function Balance() {
           <hr />
           <div className="balance-amount">
             <span>
-               <h1>10000</h1>.00 XFA
+               <h1>{balance.XAF}</h1>.00 XFA
             </span>
           </div>
         </div>

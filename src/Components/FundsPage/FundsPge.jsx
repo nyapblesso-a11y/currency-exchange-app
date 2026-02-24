@@ -21,7 +21,6 @@ function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency,
     setBalances((prevBalances) => ({
       ...prevBalances, [fromCurrency]: prevBalances[fromCurrency] + amountToDeposit,
     }))
-    console.log(`${amount} ${fromCurrency} has been deposited in your account`)
     setAmount("")
   }
   return (
