@@ -34,14 +34,15 @@ useEffect(() => {
   }
 
  
-  if (balance[fromCurrency] >= amountToExchange) {
-    setBalances((prevBalances) => ({
-      ...prevBalances,
-      [fromCurrency]: prevBalances[fromCurrency] - amountToExchange,
-      [toCurrency]: prevBalances[toCurrency] + amountToExchange * exchangeRate,
-    }));
-    setExchangeAmount("");
-  } else {
+ if (balance[fromCurrency] >= amountToExchange) {
+  setBalances((prevBalances) => ({
+    ...prevBalances,
+    [fromCurrency]: Number((prevBalances[fromCurrency] - amountToExchange).toFixed(4)),
+    [toCurrency]: Number((prevBalances[toCurrency] + (amountToExchange * exchangeRate)).toFixed(4)),
+  }));
+  
+  setExchangeAmount(""); 
+} else {
     alert("Insignificant funds");
   }
 };
