@@ -1,6 +1,6 @@
 import React from "react";
 import "./fundspage.css";
-function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency, setToCurrency}) {
+function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency, setToCurrency, balances, setBalances}) {
 
   const exchangeRates = {
   USD: { EUR: 0.8483, XAF: 556.74 },
@@ -10,6 +10,19 @@ function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency,
 
   const handleExchange = () => {
     const exchangeRate = exchangeRates[fromCurrency][toCurrency]
+  }
+
+  const handleDeposit = () => {
+    const amountToDeposit = parseFloat(amount)
+    if(amount === '' && amount <= 0) {
+      alert('amount must be valid')
+      return
+    }
+    setBalances((prevBalances) => ({
+      ...prevBalances, [fromCurrency]: prevBalances[fromCurrency] + amountToDeposit,
+    }))
+    console.log(`${amount} ${fromCurrency} has been deposited in your account`)
+    setAmount("")
   }
   return (
     <>
@@ -50,20 +63,20 @@ function FundsPge({amount, setAmount, fromCurrency, setFromCurrency, toCurrency,
           <div className="exchange">
             <div className="amount">
               <p>Amount</p>
-              <input type="number" placeholder="Enter amount" />
+              <input type="number" placeholder="Enter amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
             </div>
             <div className="select">
               <p>Currency</p>
-              <select name="" id="">
-                <option value="">USD</option>
-                <option value="">EUR</option>
-                <option value="">XFA</option>
+              <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
+                <option value="USB">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="XAF">XFA</option>
               </select>
             </div>
           </div>
 
           <div className="button-1">
-            <button>Deposit</button>
+            <button onClick={handleDeposit}>Deposit</button>
           </div>
         </div>
       </div>

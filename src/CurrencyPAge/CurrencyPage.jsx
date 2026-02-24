@@ -20,7 +20,7 @@ function CurrencyPage() {
       <div className="main-bord">
         <Header />
         <Balance />
-        <FundsPge amount={amount} setAmount={setAmount} fromCurrency={fromCurrency} setFromCurrency={setFromCurrency} toCurrency={toCurrency} setToCurrency={setToCurrency}/>
+        <FundsPge amount={amount} setAmount={setAmount} fromCurrency={fromCurrency} setFromCurrency={setFromCurrency} toCurrency={toCurrency} setToCurrency={setToCurrency} balance={balance} setBalances={setBalances}/>
         <hr />
         <div className="total-value">
           <h4>
