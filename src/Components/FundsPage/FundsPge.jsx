@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import React from "react";
 import "./fundspage.css";
-function FundsPge({dAmount,exchangeAmount, setExchangeAmount, setDamount, fromCurrency, setFromCurrency, toCurrency, setToCurrency, balance, setBalances}) {
 
-  const exchangeRates = {
+ export const exchangeRates = {
   USD: { EUR: 0.8483, XAF: 556.74 },
   EUR: { USD: 1.1789, XAF: 655.957 },
   XAF: { USD: 0.0018, EUR: 0.0015 },
 };
+function FundsPge({dAmount,exchangeAmount, setExchangeAmount, setDamount, fromCurrency, setFromCurrency, toCurrency, setToCurrency, balance, setBalances}) {
+
+
 useEffect(() => {
   localStorage.setItem('user_balances', JSON.stringify(balance));
 }, [balance]);
