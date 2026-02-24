@@ -1,7 +1,20 @@
 import React from "react";
 import "./balance.css";
+import { exchangeRates } from "../FundsPage/FundsPge"
 import ReactCountryFlag from "react-country-flag";
-function Balance({balancedefaultCurrency, setDefaultCurrency}) {
+function Balance({balance, defaultCurrency, setDefaultCurrency}) {
+
+  const totalizedValue = () => {
+    let total=0
+    Object.keys(balance).forEach((currency) => {
+      if(currency === defaultCurrency) {
+        total += balance[currency]
+      } else {
+        total += balance[currency] * exchangeRates[currency][defaultCurrency]
+      }
+    })
+    return total.toFixed(2)
+  }
   return (
     <>
       <div className="cards">
