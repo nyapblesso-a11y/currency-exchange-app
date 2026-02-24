@@ -14,7 +14,7 @@ function Balance({balance}) {
           <hr />
           <div className="balance-amount">
             <span>
-              $ <h1>{balance.USD}</h1>.00 USD
+              $ <h1>{balance.USD}</h1> USD
             </span>
           </div>
         </div>
@@ -27,7 +27,7 @@ function Balance({balance}) {
           <hr />
           <div className="balance-amount">
             <span>
-              € <h1>{balance.EUR}</h1> .00 EUR
+              € <h1>{balance.EUR}</h1> EUR
             </span>
           </div>
         </div>
@@ -40,7 +40,7 @@ function Balance({balance}) {
           <hr />
           <div className="balance-amount">
             <span>
-               <h1>{balance.XAF}</h1>.00 XFA
+               <h1>{balance.XAF}</h1> XFA
             </span>
           </div>
         </div>
