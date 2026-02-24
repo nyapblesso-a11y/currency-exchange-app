@@ -1,6 +1,12 @@
 import React from "react";
 import "./fundspage.css";
 function FundsPge() {
+
+  const exchangeRate = {
+  USD: { EUR: 0.8483, XAF: 556.74 },
+  EUR: { USD: 1.1789, XAF: 655.957 },
+  XAF: { USD: 0.0018, EUR: 0.0015 },
+};
   return (
     <>
       <div className="funds-card">

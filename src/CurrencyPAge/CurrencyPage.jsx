@@ -14,6 +14,7 @@ function CurrencyPage() {
   const [amount, setAmount] = useState("")
   const [fromCurrency, setFromCurrency] = useState("USD")
   const [toCurrency, setToCurrency] = useState("EUR")
+
   return (
     <>
       <div className="main-bord">
