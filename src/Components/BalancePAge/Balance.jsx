@@ -39,7 +39,7 @@ function Balance({ balance }) {
           <hr />
           <div className="balance-amount">
             <span>
-              <h1>{balance.XAF}</h1> XFA
+              <h1>{balance.XAF} </h1>  XFA 
             </span>
           </div>
         </div>
