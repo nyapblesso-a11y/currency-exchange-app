@@ -17,7 +17,6 @@ const [depositAmount, setDepositAmount] = useState(() => {
   const [fromCurrency, setFromCurrency] = useState("USD")
   const [toCurrency, setToCurrency] = useState("EUR")
 
-
     const totalizedValue = () => {
       let total=0
       Object.keys(balance).forEach((currency) => {
