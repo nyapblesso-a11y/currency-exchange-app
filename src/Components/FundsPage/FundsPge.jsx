@@ -51,7 +51,7 @@ useEffect(() => {
 
   const handleDeposit = () => {
     const amountToDeposit = parseFloat(dAmount)
-    if(dAmount === '' && dAmount <= 0) {
+    if(dAmount === '' || isNaN(dAmount) || dAmount <= 0) {
       alert('amount must be valid')
       return
     }
